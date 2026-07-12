@@ -10,13 +10,26 @@ REGISTER_ENDPOINT = f"{BACKEND_URL}/auth/register/"
 def register():
     data = {
       "email": "string1@email.com",
-      "password": "s1234535",
-      "full_name": "Danila"
+      "password": "s1234535"
     }
     with requests.Session() as s:
         response = s.post(REGISTER_ENDPOINT, json=data) # , headers={"Authorization": f"Bearer {token}"}
-    print(response.json())
+
+    return response.json()
+
+
+def login():
+    data = {
+      "email": "string1@email.com",
+      "password": "s1234535"
+    }
+
+    with requests.Session() as s:
+        response = s.post(LOGIN_ENDPOINT, json=data) # , headers={"Authorization": f"Bearer {token}"}
+
+    return response.json()
 
 
 if __name__ == '__main__':
-    register()
+    # print(register())
+    print(login())
