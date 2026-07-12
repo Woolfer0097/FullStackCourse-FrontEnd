@@ -1,4 +1,5 @@
 import streamlit as st
+from pathlib import Path
 
 
 with st.container(border=True, horizontal_alignment="center", vertical_alignment="center"):
@@ -6,7 +7,8 @@ with st.container(border=True, horizontal_alignment="center", vertical_alignment
     st.badge("❤️ Избранное", color="red")
     st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRggmpieE5NR7wYmvRst59UvRj3n-yE0ffdXpj7MArKHg&s")
     if st.button("Подробнее"):
-        st.switch_page("pages/book1.py")
+        st.switch_page(Path("pages/book1.py"))
+
 
 st.write("Кошка снаружи")
 st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRggmpieE5NR7wYmvRst59UvRj3n-yE0ffdXpj7MArKHg&s")

@@ -7,7 +7,10 @@ navbar = st.navigation(
             st.Page("authorization/login.py", title="Логин"),
             st.Page("authorization/registration.py", title="Регистрация"),
         ],
-        "Главная":
+        "Основные страницы": [
+            st.Page("pages/main.py", title="Главная"),
+            st.Page("pages/container.py", title="котики"),
+        ]
     }
 )
 navbar.run()

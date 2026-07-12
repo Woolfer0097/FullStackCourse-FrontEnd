@@ -12,6 +12,7 @@ with st.form("login_form", border=True):
 
     st.subheader("Пароль")
     psw = st.text_input("Пароль", value=session_state.get("psw"), placeholder="Введите пароль...")
+
     submitted = st.form_submit_button("Войти")
     if submitted:
         st.switch_page("pages/main.py")
