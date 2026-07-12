@@ -13,7 +13,8 @@ def register():
       "password": "s1234535",
       "full_name": "Danila"
     }
-    response = requests.post(REGISTER_ENDPOINT, json=data) # , headers={"Authorization": f"Bearer {token}"}
+    with requests.Session() as s:
+        response = s.post(REGISTER_ENDPOINT, json=data) # , headers={"Authorization": f"Bearer {token}"}
     print(response.json())
 
 
