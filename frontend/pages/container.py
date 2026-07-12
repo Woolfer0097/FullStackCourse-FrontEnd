@@ -10,4 +10,4 @@ for i, col in enumerate(row1 + row2):
     tile.badge("❤️ Избранное", color="red")
     tile.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRggmpieE5NR7wYmvRst59UvRj3n-yE0ffdXpj7MArKHg&s")
     if tile.button("Подробнее", key=f"btn{i}"):
-        tile.switch_page("pages/book1.py")
+        st.switch_page("pages/book1.py")
