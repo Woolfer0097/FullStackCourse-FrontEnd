@@ -1,6 +1,7 @@
 import streamlit as st
 
 
+# Сюда нужно прописывать все новые страницы, которые вы создаёте
 navbar = st.navigation(
     {
         "Авторизация": [
@@ -8,8 +9,9 @@ navbar = st.navigation(
             st.Page("authorization/registration.py", title="Регистрация"),
         ],
         "Основные страницы": [
-            st.Page("pages/main.py", title="Главная"),
-            st.Page("pages/container.py", title="котики"),
+            st.Page("pages/home.py", title="Главная"),
+            st.Page("pages/container.py", title="Котики"),
+            st.Page("pages/book1.py", title="доп страниц")
         ]
     }
 )
