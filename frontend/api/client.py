@@ -50,14 +50,3 @@ def request_with_authorization_header(request_type: str, endpoint: str, params: 
 #     params={"id": 1},
 #     payload={"name": "blablabla"},
 # )
-
-
-if __name__ == '__main__':
-    register_response = register()
-
-    print(register_response)
-    print(json.dumps(register_response, indent=4))
-
-    login_response = login()
-    print(login_response)
-    print(json.dumps(login_response, indent=4))
